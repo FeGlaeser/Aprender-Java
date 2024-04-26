@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio6 {
+public class ApostaEsportiva {
     public static void main(String[] args) {
         Random randola = new Random();
         Scanner leitor = new Scanner(System.in);

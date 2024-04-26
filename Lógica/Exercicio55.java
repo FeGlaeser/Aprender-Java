@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Exercicio5 {
+public class Exercicio55 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 

@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio5 {
+public class MaiorElementoMatriz {
     public static void main(String[] args) {
         Random randomizer = new Random();
         Scanner leitor = new Scanner(System.in);

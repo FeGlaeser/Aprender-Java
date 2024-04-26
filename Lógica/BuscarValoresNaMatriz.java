@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Exercicio3 {
+public class BuscarValoresNaMatriz {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         Random randomizer = new Random();
