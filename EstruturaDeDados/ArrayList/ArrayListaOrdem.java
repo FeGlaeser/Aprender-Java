@@ -1,4 +1,4 @@
-package ArraysEmJava;
+package EstruturaDeDados.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;

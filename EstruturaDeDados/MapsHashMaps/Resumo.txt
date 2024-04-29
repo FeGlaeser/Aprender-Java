@@ -1,0 +1,15 @@
+Um mapa é quase um dicionario de python.
+
+um mapa armazena um valor e liga a outro, uma key que é ligada a um value.
+para chamar um HashMap nos devemos fazer: HashMap<Key type, Value type> nome = new HashMap<>();
+existem vários comandos úteis em HashMaps Ex:
+
+HashMap.contains: ele pode ser usado para retornar true ou false se conter um valor em key ou value.
+
+HashMap.get(key) = retorna o value.
+
+HashMap.remove = ele remove algo com a key.
+
+HashMap.replace(key, value) = ele muda o valor de um key se não existir essa key ele não cria.
+
+HashMap.put(key, value) = coloca algo na lista se ja tiver a key ele muda o value se precisar.

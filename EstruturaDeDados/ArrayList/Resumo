@@ -1,0 +1,19 @@
+esse sistema de ArrayList e LinkedList tem bastante similiaridade com as listas do python.
+
+tanto o Array quanto o Linked são chamados do mesmo jeito ArrayList<tipo> nome = new LinkedList<>();
+isso se da porque eles são da mesma classe do java, todos se não quase todos os comandos são iguais.
+
+tanto o ArrayList quanto o LinkedList funcionam do mesmo jeito se a lista for pequena porem,
+se ela for grande o impacto entre escolher uma lista Linked ou Array pode ser enorme isso porque
+oque muda de uma pra outra é como elas funcionam.
+
+o LinkedList basicamente cria uma corrente entre os elementos na lista isso faz com que ela tenha
+sempre que começar ou do inicio para vasculhar por um valor na lista ou do fim (cada uma das pontas da corrente)
+então para adicionar ou remover itens da lista é notavelmente mais fácil já que é só refazer a ligação de valores.
+mas para vasculhar na lista ela tem que começar de umas das pontas fazendo ela demorar muito tempo para isso.
+
+já o ArrayList funcionalmente é mais devagar para adicionar um valor da lista já que ele ele precisa criar um novo array
+com o tamanho que vai ter a lista e adicionar um valor por vez nela, diferente do LinkedList que utiliza o sistema de corrente.
+em contrapartida o ArrayList utiliza de um metodo randomico para pegar valores da lista, levando o mesmo tempor para o valor
+5.000 e para o valor 1 o fazendo melhor em situações de achar valores na lista.
+
