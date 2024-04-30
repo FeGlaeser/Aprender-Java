@@ -1,0 +1,2 @@
+a estrutura queue funciona como uma fila aonde o primeiro a entrar é o primeiro a sair 
+o ultimo a entrar é o ultimo a sair.
