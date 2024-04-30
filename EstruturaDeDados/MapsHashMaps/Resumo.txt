@@ -13,3 +13,6 @@ HashMap.remove = ele remove algo com a key.
 HashMap.replace(key, value) = ele muda o valor de um key se não existir essa key ele não cria.
 
 HashMap.put(key, value) = coloca algo na lista se ja tiver a key ele muda o value se precisar.
+
+a principal diferença entre o conjunto hashmap e o conjunto map é que o hash não garante a ordem
+de entrada dentro de si, diferentemente do map.

@@ -1,0 +1,17 @@
+O melhor exemplo de para explicar um Stack é de fato uma pilha de coisas.
+para colocar se coloca em cima e se tira de o de cima se não cai.
+
+stack só tem 5 comandos e pode ser chamado assim: Stack<tipo> nome = new Stack<>();
+
+stack.empty(): retorna (true) caso a pilha estiver vazia.
+
+stack.peek(): retorna o valor do topo sem tira-lo da pilha.
+
+stack.add("ALGO"): adiciona um valor a pilha obviamente em cima.
+
+stack.pop(): retira o valor de cima da pilha.
+
+stack.search("ALGO"): ele procura na pilha e diz a posição começando de 1 do topo para baixo.
+caso o valor não estiver na pilha ele retorna -1.
+
+um exemplo mto foda de stack 
