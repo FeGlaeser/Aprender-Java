@@ -1,2 +1,2 @@
-a estrutura queue funciona como uma fila aonde o primeiro a entrar é o primeiro a sair 
-o ultimo a entrar é o ultimo a sair.
+Resumidamente a queue funciona de uma maneira parecida com uma fila o primeiro a entrar é sempre
+o primeiro a sair da fila, o ultimo a entrar na fila é sempre o ultimo a sair dela.
