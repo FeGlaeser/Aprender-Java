@@ -27,6 +27,7 @@ public class MainLancheria {
                     break;
 
                 case 2:
+                    limparTela();
                     for (Cliente pessoa : pedidos) {
                         pessoa.infoCliente();
                         System.out.println();
@@ -104,7 +105,7 @@ public class MainLancheria {
             for (Map.Entry<String, Float> entrada : map.entrySet()) {
                 System.out.printf("%s:\t\t%.2f R$\n", entrada.getKey(), entrada.getValue());
                 total += entrada.getValue();}}
-                System.out.printf("Total:\t\t%.2f R$", total);
+                System.out.printf("Total:\t\t%.2f R$\n", total);
     }
     public static boolean confirmar(String mensagem, Scanner leitor) {
         while (true) {
