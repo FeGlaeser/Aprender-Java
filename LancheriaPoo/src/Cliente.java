@@ -9,9 +9,11 @@ public class Cliente {
     private String nome;
     private LinkedList<HashMap<String, Float>> pedido;
     private String tempo;
+    private int numeroPedido;
 
     public Cliente(String nomeCliente, LinkedList<HashMap<String, Float>> pedido) {
         numero ++;
+        this.numeroPedido = numero;
         DateTimeFormatter formatar = DateTimeFormatter.ofPattern("HH:mm dd/MM");
         this.nome = nomeCliente;
         this.pedido = pedido;
@@ -26,10 +28,15 @@ public class Cliente {
                 total += entrada.getValue();}}
         System.out.println();
         System.out.printf("Nome do cliente: %s\tTotal:\t%.2f R$\n", this.nome, total);
-        System.out.printf("Número do pedido: %d\n", numero);
+        System.out.printf("Número do pedido: %d\n", this.numeroPedido);
         System.out.printf("%s\n", this.tempo);
-
-
+    }
+    public Boolean verificarNumero(int numeroPedidor) {
+        if (this.numeroPedido == numeroPedidor)
+            return true;
+        else
+            return false;
+        
     }
 }
  

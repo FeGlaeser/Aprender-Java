@@ -28,15 +28,18 @@ public class MainLancheria {
 
                 case 2:
                     limparTela();
-                    for (Cliente pessoa : pedidos) {
-                        pessoa.infoCliente();
-                        System.out.println();
-                    }
-                    System.out.print("Digite algo para continuar");
+                    mostrar(pedidos);
+                    System.out.print("Digite algo para continuar: ");
                     leitor.next();
                     break;
                 
                 case 3:
+                    limparTela();
+                    mostrar(pedidos);
+                    if (confirmar("Exclusão", leitor)) {
+                        pedidos = Excluir(pedidos, leitor);}
+                    System.out.print("aperte algo para continuar: ");
+                    leitor.next();
                     break;
                 
                 case 4:
@@ -55,7 +58,7 @@ public class MainLancheria {
             System.out.println("[1] Inserir Pedido ");
             System.out.println("[2] Ver A fila de Pedidos Atual");
             System.out.println("[3] Excluir Pedido");
-            System.out.println("[4] Finalizar Pedido");
+            System.out.println("[4] Concluir Pedido");
             System.out.println("[5] Fechar Sistema");
 
         String escolhaTexto = leitor.next();
@@ -96,9 +99,7 @@ public class MainLancheria {
             comida.put(produto, preco);
             pedido.add(comida);
         }
-        return pedido;
-    }
-
+        return pedido;}
     public static void Exibir(LinkedList<HashMap<String, Float>> pedido) {
         float total = 0;
         for (HashMap<String, Float> map : pedido) {
@@ -121,8 +122,24 @@ public class MainLancheria {
         else {
             System.out.println("Selecione S ou N");
             continue;}}}
+    public static LinkedList<Cliente> Excluir(LinkedList<Cliente> listaclientes, Scanner leitor) {
+        System.out.print("Qual o número do pedido para cancelar: ");
+        int numeroExclusao = leitor.nextInt();
+        boolean Encontrou = false;
+        for (Cliente pessoa : listaclientes) {
+            if(pessoa.verificarNumero(numeroExclusao)) {
+                Encontrou = true;
+                listaclientes.remove(numeroExclusao - 1);
+                break;}}
+
+        if (!Encontrou)
+            System.out.print("Não existe um pedido com esse número");
+        return listaclientes;
+    }
+    public static void mostrar(LinkedList<Cliente> lista) {
+        for (Cliente pessoa : lista) {
+            pessoa.infoCliente();
+            System.out.print("\n\n");}}
     public static void limparTela() {
         System.out.print("\033[H\033[J");
-        System.out.flush();
-    }
-}
+        System.out.flush();}}
