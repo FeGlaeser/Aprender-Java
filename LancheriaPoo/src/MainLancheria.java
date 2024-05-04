@@ -36,13 +36,14 @@ public class MainLancheria {
                 case 3:
                     limparTela();
                     mostrar(pedidos);
-                    if (confirmar("Exclusão", leitor)) {
-                        pedidos = Excluir(pedidos, leitor);}
-                    System.out.print("aperte algo para continuar: ");
-                    leitor.next();
+                    pedidos = Excluir(pedidos, leitor);
                     break;
-                
                 case 4:
+                    limparTela();
+                    mostrar(pedidos);
+                    if (confirmar("Entrega", leitor)) {
+                        pedidos = Excluir(pedidos, leitor);
+                    }
                     break;
             }
         }
@@ -129,8 +130,9 @@ public class MainLancheria {
         for (Cliente pessoa : listaclientes) {
             if(pessoa.verificarNumero(numeroExclusao)) {
                 Encontrou = true;
-                listaclientes.remove(numeroExclusao - 1);
-                break;}}
+                if (confirmar("Cancela", leitor)) {
+                    listaclientes.remove(numeroExclusao - 1);
+                    break;}}}
 
         if (!Encontrou)
             System.out.print("Não existe um pedido com esse número");
