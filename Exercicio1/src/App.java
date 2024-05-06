@@ -43,6 +43,10 @@ public class App {
             
             alterarCarro(carros.get(numeroCarroAlterar), leitor);}
         
+        System.out.print("Quantos km terá a pista: ");
+        int pistaDistancia = leitor.nextInt();
+        
+        
         
         
     
