@@ -1,12 +1,10 @@
 import java.util.Scanner;
 import java.util.LinkedList;
-import java.util.Random;
 
 public class App {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         LinkedList<Carro> carros = new LinkedList<>();
-        Random randomizer = new Random();
 
         int contadorCarros = 1;
         while (true) {
@@ -43,14 +41,7 @@ public class App {
             
             alterarCarro(carros.get(numeroCarroAlterar), leitor);}
         
-        System.out.print("Quantos km terá a pista: ");
-        int pistaDistancia = leitor.nextInt();
-        
-        
-        
-        
-    
-        
+
         leitor.close();
 }
     public static boolean continuar(Scanner leitor, String mensagem) {
