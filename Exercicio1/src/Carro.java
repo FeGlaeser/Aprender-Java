@@ -21,16 +21,19 @@ public class Carro {
     public double getVelocidade() {
         return velocidade;}
     
+    public void setVelocidade(double velocidadeNova) {
+        this.velocidade = velocidadeNova;}
+    
     // marca
     public void setMarca(String novaMarca) {
-        this.marca = novaMarca;}
+        this.marca = novaMarca.strip();}
     
     public String getMarca() {
         return marca;}
     
     // modelo
     public void setModelo(String novoModelo) {
-        this.modelo = novoModelo;}
+        this.modelo = novoModelo.strip();}
     
     public String getModelo() {
         return modelo;}

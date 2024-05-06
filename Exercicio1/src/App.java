@@ -15,17 +15,16 @@ public class App {
             String marca = leitor.next();
             System.out.printf("Qual o modelo do %dº carro: ", contadorCarros);
             String modelo = leitor.next();
-            System.out.printf("Qual o ano do %s: ", modelo);
+            System.out.printf("Qual o ano do %s: ", marca);
             int ano = leitor.nextInt();
-            System.out.printf("Qual a velocidade inicial do %s: ", modelo);
+            System.out.printf("Qual a velocidade inicial do %s: ", marca);
             double velocidadeInicio = leitor.nextFloat();
             
             Carro carro = new Carro();
             carro.criarCarro(marca, modelo, ano, velocidadeInicio);
             carros.add(carro);
-            contadorCarros ++;
 
-            if (continuar(leitor, "Deseja continuar? "))
+            if (!continuar(leitor, "Deseja continuar? "))
                 break;
 
             contadorCarros ++;}
@@ -33,7 +32,8 @@ public class App {
         while (true) {
             limparTela();
             for (Carro carro : carros) {
-                System.out.printf("%d) %s\n", carros.indexOf(carro), carro.getModelo());}
+                System.out.printf("%d) ", carros.indexOf(carro));
+                System.out.printf("%s %s %d\n", carro.getMarca(), carro.getModelo(), carro.getAno());}
 
             if (!continuar(leitor, "Deseja mudar algo de algum dos carros: "))
                 break;
@@ -44,17 +44,23 @@ public class App {
             alterarCarro(carros.get(numeroCarroAlterar), leitor);}
         
         
-
+        
+    
+        
         leitor.close();
 }
     public static boolean continuar(Scanner leitor, String mensagem) {
+        leitor.nextLine();
         while (true) {
-            System.out.println("Deseja continuar? ");
-            System.out.println("[S]im ou [N]ão: ");
-            if (leitor.next().equalsIgnoreCase("S"))
+            System.out.println(mensagem);
+            System.out.print("[S]im ou [N]ão: ");
+            String escolha = leitor.next();
+
+            if (escolha.equalsIgnoreCase("S"))
                 return true;
-            else if (leitor.next().equalsIgnoreCase("N"))
+            else if (escolha.equalsIgnoreCase("N"))
                 return false;
+            limparTela();
             System.out.println("Erro, selecione uma opção válida.");
         }
     }
@@ -63,9 +69,8 @@ public class App {
                 System.out.println("1) Modelo: "+ carro.getModelo());
                 System.out.println("2) Marca: "+ carro.getMarca());
                 System.out.println("3) Ano: "+ carro.getAno());
-                System.out.println("4) Velocidade inicial " + carro.getVelocidade() + "Km/h");
-
-                System.out.print("Qual das informações você deseja alterar: ");
+                System.out.printf("4) Velocidade inicial %.1f Km/h", carro.getVelocidade());
+                System.out.println("Qual das informações você deseja alterar: ");
                 int operacao = leitor.nextInt();
 
                 switch (operacao) {
@@ -78,12 +83,21 @@ public class App {
                         carro.setMarca(leitor.next());
                         break;
                     case 3:
-                        System.out.println("qual a nova");
-                }
-        }
+                        System.out.println("qual o novo ano: ");
+                        carro.setAno(leitor.nextInt());
+                        break;
+                    case 4:
+                        System.out.print("Qual a nova velociade inicial: ");
+                        carro.setVelocidade(leitor.nextFloat());
+                        break;
+                    default:
+                        break;}
+                    if (!continuar(leitor, "Deseja alterar mais alguma coisa"))
+                        break;
+                    limparTela();}
     }
     public static void limparTela() {
-        System.out.print("\033[M\033[J");
+        System.out.print("\033[H\033[J");
         System.out.flush();
     }
 }
