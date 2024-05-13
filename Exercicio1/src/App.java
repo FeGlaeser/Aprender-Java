@@ -9,9 +9,9 @@ public class App {
         int contadorCarros = 1;
         while (true) {
             limparTela();
-            System.out.printf("Qual a marca do %dº carro: ", contadorCarros);
+            System.out.printf("Qual a marca do %dº Carro: ", contadorCarros);
             String marca = leitor.next();
-            System.out.printf("Qual o modelo do %dº carro: ", contadorCarros);
+            System.out.printf("Qual o modelo do %dº Carro: ", contadorCarros);
             String modelo = leitor.next();
             System.out.printf("Qual o ano do %s: ", marca);
             int ano = leitor.nextInt();
