@@ -11,7 +11,7 @@ public class CPF {
         cpfBruto = leitor.next();
 
         if (cpfBruto.length() == 11) {
-            if (vericar_numero(cpfBruto)) {break;}
+            if (vericar_numero(cpfBruto)) break;
 
             else {
                 limparConsole();
@@ -25,7 +25,7 @@ public class CPF {
                 cpfBruto = cpfBruto.substring(0, 3)
                 + cpfBruto.substring(4, 7) + cpfBruto.substring(8, 11)
                 + cpfBruto.substring(12, 14);
-                if (vericar_numero(cpfBruto)) {break;}
+                if (vericar_numero(cpfBruto)) break;
 
                 else {limparConsole();
                     System.out.println("Digite apenas valores númericos.");}}
