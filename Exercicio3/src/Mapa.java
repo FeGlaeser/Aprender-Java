@@ -10,7 +10,7 @@ public class Mapa {
             for (int y = 0; y != tamanho[0].length; y ++) {
                 System.out.print("⬜");
             }
-        System.out.println();
+        System.out.println("");
         }
     }
 }
